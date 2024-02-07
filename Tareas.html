@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Tareas</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Protest+Revolution&display=swap');   
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Protest+Guerrilla&family=Protest+Revolution&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Song+Myung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+body {
+  background-color: rgb(245, 245, 245);
+}
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 60px 0 0; 
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0), 0 2px 10px 0 rgb(0, 0, 0);
+  width: 240px;
+  z-index: 600;
+}
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(248, 6, 216, 0.308), 0 2px 10px 0 rgba(182, 3, 253, 0.815);
+}
+.sidebar a{
+  color:black;
+}
+.sidebar a:hover{
+  color:rgb(69, 4, 71);
+}
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
+.title{
+  background:white;
+  -webkit-background-clip: text;
+  color: transparent;  
+  font-family: 'Berkshire Swash', serif;
+}
+.bg{
+  
+  -webkit-background-clip: text;
+  color: transparent;
+  background: linear-gradient(rgb(255, 255, 255),rgb(224, 89, 224));
+  color: black;  
+}
+.bgs{
+  background: rgb(49, 3, 49);
+}
+.fa-bell{
+  color: white;
+}
+.fa-user{
+  color: white;
+}
+.tabla{
+  width: 600px;
+  position: relative;
+  top: 50px; left: 50px;
+  
+}
+.task{
+  width: 240px;
+  position: relative;
+  top: 70px; left: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.task1{
+  width: 240px;
+  position: relative;
+  top: 40px; left: 20px;
+  font-family: 'Berkshire Swash', serif;
+  color: rgb(88, 8, 88);
+}
+.task3{
+  width: 240px;
+  position: relative;
+  top: 30px; left: 168px;
+}
+.id{
+  text-align: center;
+}
+.bxs-file-plus{
+  top: 40px; right: 26px;
+  position: static;
+}
+.buscar{
+  width: 20px;
+  position: relative;
+  top: 70px; left: 500px;
+}
+.bx-search{
+  width: 20px;
+  position: absolute;
+  top:12px; left: 180px;
+}
+.task4{
+  width: 20px;
+  position: absolute;
+  top:50px; left: 800px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+    </style>
+</head>
+<body>
+    <!--Main Navigation-->
+<header>
+  <nav
+       id="sidebarMenu"
+       class="collapse d-lg-block sidebar d-md-flex collapse bg sidebar aria-expanded me-lg-0 d-none"
+       >
+    <div class="position-fixed bg">
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <a
+           href="Dashboard.html"
+           class="list-group-item list-group-item-action bg py-2 ripple"
+           >
+          <i class="bx bxs-dashboard fa-fw me-3"></i
+            ><span>Dashboard</span>
+        </a>
+        <a
+           href="Principal.html"
+           class="list-group-item list-group-item-action bg py-2 ripple mx-2 mt-5"
+           >
+          <i class="bx bxs-home-alt-2 fa-fw me-3"></i
+            ><span>Inicio</span>
+        </a>
+        <a
+           href="Contrasena.html"
+           class="list-group-item list-group-item-action bg py-2 ripple mx-2 mt-5"
+           ><i class="fas fa-lock fa-fw me-3"></i><span>Contraseña</span></a
+          >
+        <a
+           href="User.html"
+           class="list-group-item list-group-item-action bg py-2 ripple mx-2 mt-5"
+           ><i class="bx bxs-user-check fa-fw me-3"></i><span>Usuarios</span></a
+          >
+        <a
+           href="#"
+           class="list-group-item list-group-item-action bg py-2 ripple mx-2 mt-5"
+           ><i class="bx bxs-file-html fa-fw me-3"></i><span>Tareas</span>
+        </a>
+        <a
+           href="Developer.html"
+           class="list-group-item list-group-item-action bg py-2 ripple mx-2 mt-5"
+           ><i class="bx bx-code fa-fw me-3"></i><span>Desarrollador</span></a
+          >
+          <a href="paginaLogin.html" class="list-group-item list-group-item-action bg py-2 ripple mx-2 mt-5">
+          <i class="bx bx-log-out fa-fw me-3"></i><span>Cerrar sesión</span></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+  <nav
+       id="main-navbar"
+       class="navbar navbar-expand-lg navbar-light bgs fixed-top"
+       >
+    <div class="container-fluid">
+
+  <!-- Brand -->
+      <a class="navbar-brand" href="#">
+        <img
+             src="Imagenes/proyecto.png"
+             height="50"
+             alt=""
+             loading="lazy"
+             /> <span class="title"> Administrador de tareas</span>
+      </a>
+  <!-- Right links -->
+      <ul class="navbar-nav ms-auto d-flex flex-row">
+  <!-- Notification dropdown -->
+        <li class="nav-item dropdown">
+          <a
+             class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
+             href="#"
+             id="navbarDropdownMenuLink"
+             role="button"
+             data-mdb-toggle="dropdown"
+             aria-expanded="false"
+             >
+            <i class="fas fa-bell"></i>
+            <span class="badge rounded-pill badge-notification"></span></a>
+          <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+              >
+            <li><a class="dropdown-item" href="#">Algunas notificaciones</a></li>
+            <li><a class="dropdown-item" href="#">Otras notificaciones</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+  <!-- Perfil -->
+        <li class="nav-item dropdown">
+          <a
+             class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
+             href="#"
+             id="navbarDropdownMenuLink"
+             role="button"
+             data-mdb-toggle="dropdown"
+             aria-expanded="false"
+             >
+            <i class="fas fa-user"></i>
+            <span class="badge rounded-pill badge-notification"></span>
+          </a>
+          <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+              >
+            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+            <li><a class="dropdown-item" href="#">Ajustes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!--Main layout-->
+<main style="margin-top: 58px">
+  <div>
+    <h1 class="task1"><b>TAREAS</b></h1>
+    <form class="buscar">
+      <input
+             autocomplete="off"
+             type="search"
+             class="form-control rounded"
+             placeholder='Buscar tarea por fecha'
+             style="min-width: 200px"
+             />
+      <span><i class="bx bx-search bg-purple"></i
+        ></span>
+    </form>
+    <h2 class="task"><sub>Módulo I</sub></h2>
+    <h3 class="task3"><div><button type="button" class="btn btn-primary"><i class="bx bx-plus">Nuevo registro</i></button></div></h3>
+      <table class="tabla" style="border-color: purple;" border=1>
+        <tr>
+         <th class="id">Id</th>
+         <th class="id">Descripción</th>
+         <th class="id">Fecha</th>
+         <th class="id"></th>
+         <th class="id"></th>
+        </tr>
+        <tr>
+          <td><br></td>
+          <td> <br></td>
+        </tr>
+        <tr>
+          <td>001</td>
+          <td class="id">Estudiar Stackmean</td>
+          <td class="id">01/02/24</td>
+          <td class="id"></td>
+          <td> <div><button type="button" class="btn btn-success"><i class="bx bxs-edit-alt"></i></button></div></td>
+          <td> <div><button type="button" class="btn btn-danger"><i class="bx bx-trash"></i></button></div></td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td class="id">Creación del FrontEnd</td>
+          <td class="id">01/02/24</td>
+          <td class="id"></td>
+          <td> <div><button type="button" class="btn btn-success"><i class="bx bxs-edit-alt"></i></button></div></td>
+          <td> <div><button type="button" class="btn btn-danger"><i class="bx bx-trash"></i></button></div></td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td class="id">Revisión del FrontEnd</td>
+          <td class="id">01/02/24</td>
+          <td class="id"></td>
+          <td> <div><button type="button" class="btn btn-success"><i class="bx bxs-edit-alt"></i></button></div></td>
+          <td> <div><button type="button" class="btn btn-danger"><i class="bx bx-trash"></i></button></div></td>
+        </tr>
+       </table>
+      
+  </div>
+  <div class="container pt-4">
+  </div>
+</main>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+
+</script>
+</body>
+</html>
